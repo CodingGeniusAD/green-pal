@@ -1,0 +1,3871 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assests/green-grass-field-background.jpg") center/cover no-repeat; */
+  
+
+
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+
+  z-index: 100;
+
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.btn {
+  background: #ff8c00;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e67e00;
+  transform: translateY(-1px);
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 24px 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main-hero-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+.cta-text {
+  font-size: 16px;
+  margin: 20px 0;
+  color: #f0f0f0;
+  font-weight: 500;
+}
+.cta-text-form {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Address Form */
+.address-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.field-house {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 12px;
+  text-align: center;
+  border: 1px solid #e67e00;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.field-house::placeholder {
+  color: #999;
+}
+
+.btn-main {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #ff8c00;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background: #e67e00;
+  transform: translateY(-1px);
+}
+
+/* Service Carousel */
+.service-carousel {
+  
+  
+  padding: 20px 0 40px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 24px;
+  gap: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-left: 24px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Service Cards */
+.service-card {
+  flex: 0 0 280px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  scroll-snap-align: start;
+  color: #333;
+}
+
+.service-card:first-child {
+  margin-left: 0;
+}
+
+/* Price Badge */
+.price-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ff8c00;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+}
+
+.price-amount {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.price-unit {
+  display: block;
+  font-size: 10px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: start;
+ 
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid #e8f5e8;
+}
+
+.online-status-1{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: start;
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #28a745;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Service Details */
+.service-details {
+  
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 14px;
+  letter-spacing: 1px;
+  
+}
+
+.rating-text {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #495057;
+}
+
+.dollar-icon {
+  color: #28a745;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.avg-price {
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Card Button */
+.card-btn {
+  margin-top: 4px;
+  align-self: start;
+  background: white;
+  border: 1px solid #000;
+  color: #495057;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* As Seen In Section */
+.as-seen-in {
+  background: #019A5A;
+  color: white;
+  padding-block: 12px;
+}
+
+.as-seen-in-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Publications Section */
+.publications-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.as-seen-in-title {
+  font-size: 30x;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: white;
+}
+
+/* Brand Logos Carousel */
+.brand-logos-carousel {
+  display: flex;
+  overflow-x: auto ;
+  /* scroll-snap-type: x mandatory; */
+  gap: 20px;
+  padding: 0 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand-logos-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  min-width: 120px;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Divider */
+.section-divider {
+  height: 1px;
+  background: #34AD7A;
+  margin: 30px 0;
+}
+
+/* Rating Section Bottom */
+.rating-section-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-score {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.review-count {
+  font-size: 16px;
+  color: white;
+  opacity: 0.9;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #ffc107;
+  font-size: 20px;
+  background-color:#34AC7A;
+  line-height: 0px;
+  padding-inline:4px;  
+  padding-block: 10px;
+  
+}
+
+/* Lawn Care Pros Hero Section */
+.lawn-care-pros-hero {
+  background: #f0f8ff;
+  padding: 60px 24px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pros-hero-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.breadcrumb-item {
+  color: #666;
+  font-weight: 500;
+}
+
+.breadcrumb-item.active {
+  color:#2FB4EC;
+  font-weight: 600;
+}
+
+.breadcrumb-separator {
+  color: #ccc;
+  font-weight: 400;
+}
+
+/* Main Heading */
+.pros-main-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Subheading */
+.pros-subheading {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 40px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Search Container */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #CCD3D7;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.search-icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+  text-align: center
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input-wrapper-reviews{
+  background-color: #fff;
+  border: none;
+  padding-block: 0px;
+}
+
+.search-icon-reviews{
+  left: 25px !important;
+}
+
+/* How does GreenPal Work FAQ Section */
+.faq-section {
+  background: #fafafa;
+  padding: 80px 24px;
+  position: relative;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ Header */
+.faq-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.faq-subheading {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.highlighted-text {
+  position: relative;
+  
+  
+  
+}
+.highlighted-text::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 30%; /* only bottom 20% */
+  background: linear-gradient(
+    to top,
+    #61D15C 0%,         /* solid green at bottom */
+    rgba(97, 209, 92, 0) 100%  /* fade to transparent */
+  );
+  z-index: 0;
+}
+
+/* keep content above gradient */
+.highlighted-text > * {
+  position: relative;
+  z-index: 1;
+}
+footer{
+  background-color: #0A3755;
+}
+
+/* FAQ List */
+.faq-list {
+  position: relative;
+  /* margin-bottom: 40px; */
+}
+
+/* Last FAQ Item with Blur Gradient */
+.faq-item:last-child {
+  border-bottom: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-item:last-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to top, #fafafa 0%, rgba(250, 250, 250, 0.8) 50%, rgba(250, 250, 250, 0.4) 80%, transparent 100%);
+  pointer-events: none;
+  z-index: 111;
+}
+
+.faq-item:last-child .faq-question {
+  position: relative;
+  z-index: 2;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.faq-text {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+/* FAQ Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.expanded .faq-answer {
+  max-height: 200px;
+  padding: 0 0 20px 0;
+  opacity: 1;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Gradient Overlay and Button */
+.faq-gradient-overlay {
+  position: relative;
+  text-align: center;
+  margin-top: -15px;
+  z-index: 111;
+
+
+}
+
+.see-all-faqs-btn {
+  background: white;
+  border: 1px solid #ff8c00;
+  border-radius: 222px;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #ff8c00;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.see-all-faqs-btn:hover {
+  background: #f8f9fa;
+  border-color: #ff8c00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chevron-right {
+  transition: transform 0.3s ease;
+}
+
+.see-all-faqs-btn:hover .chevron-right {
+  transform: translateX(4px);
+}
+
+/* Top Rated Lawn Mowing Service Providers Section */
+.top-rated-providers {
+  background: white;
+  padding: 80px 24px;
+}
+
+.providers-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Main Heading */
+.providers-main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* Provider Card */
+.provider-card {
+ 
+}
+
+.provider-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.providers-content{
+
+  padding-block: 21px;
+  border-bottom: 1px solid #EEF0F2;
+}
+
+.provider-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid #e8f5e8;
+  flex-shrink: 0;
+}
+
+.provider-details {
+  flex: 1;
+}
+
+.provider-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.hiring-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.provider-rating {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  
+}
+
+.provider-stars {
+  color: #ffc107;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.provider-rating-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Provider Button */
+.provider-btn {
+  width: 75%;
+  margin-top: 16px;
+  border: 1px solid #ff8c00;
+  color: #ff8c00;
+  padding: 14px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.provider-btn:hover {
+  background: #fff8f0;
+  border-color: #e67e00;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  position: relative;
+  
+}
+
+.quote-mark {
+  font-size: 48px;
+  color: #333;
+  font-weight: 700;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  line-height: 1;
+}
+
+.testimonial-content {
+  
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 4px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.testimonial-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.read-more-link {
+  color: #2FB4EC;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.read-more-link:hover {
+  color: #1a8bb8;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .main-header {
+    padding: 40px 24px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .hero-content {
+    padding-inline: 24px;
+    padding-block: 20px;
+  }
+  
+  .main-hero-heading {
+    font-size: 32px;
+  }
+  
+  .subheading {
+    font-size: 18px;
+  }
+  
+  .cta-text {
+    font-size: 14px;
+  }
+  
+  .field-house {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  
+  .btn-main {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  
+  .service-card {
+    flex: 0 0 260px;
+    padding: 16px;
+  }
+  
+  .profile-pic {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .service-title {
+    font-size: 14px;
+  }
+  
+  .stars {
+    font-size: 12px;
+  }
+  
+  .rating-text {
+    font-size: 11px;
+  }
+  
+  .price-info {
+    font-size: 11px;
+  }
+  
+  .card-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .carousel-container {
+    padding: 0 20px;
+    gap: 12px;
+  }
+  
+  .pagination-dots {
+    margin-top: 16px;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  /* As Seen In Mobile Styles */
+  .as-seen-in {
+    
+  }
+  
+  .as-seen-in-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  
+  .brand-logo {
+    min-width: 100px;
+  }
+  
+  .logo-text {
+    font-size: 12px;
+  }
+  
+  .rating-score {
+    font-size: 30px;
+  }
+  
+  .review-count {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  
+  .star {
+    font-size: 18px;
+  }
+  
+  .section-divider {
+    margin: 8px 0;
+  }
+  
+  /* Lawn Care Pros Mobile Styles */
+  .lawn-care-pros-hero {
+    padding: 40px 20px;
+    min-height: 50vh;
+  }
+  
+  .pros-main-heading {
+    font-size: 35px;
+    margin-bottom: 16px;
+  }
+  
+  .pros-subheading {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .search-input-wrapper {
+    padding: 16px 16px;
+    margin-inline: 16px;
+  }
+  
+  .search-input {
+    font-size: 14px;
+  }
+  
+  /* FAQ Mobile Styles */
+  .faq-section {
+    padding: 35px 20px;
+  }
+  
+  .faq-main-heading {
+    font-size: 35px;
+    margin-bottom: 16px;
+  }
+  
+  .faq-subheading {
+    font-size: 16px;
+  }
+  
+  .faq-question {
+    padding: 16px 0;
+    font-size: 20px;
+    line-height:  28px;
+   }
+  
+  .faq-answer p {
+    font-size: 18px;
+  }
+  
+  .see-all-faqs-btn {
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+  
+  /* Top Rated Providers Mobile Styles */
+  .top-rated-providers {
+    padding: 60px 20px;
+  }
+  
+  .providers-main-heading {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  
+  .provider-card {
+    
+  }
+ 
+  
+  .provider-pic {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .provider-name {
+    font-size: 16px;
+  }
+  
+  .hiring-count {
+    font-size: 16px;
+  }
+  
+  .provider-stars {
+    font-size: 18px;
+    line-height: 1
+  }
+  
+  .provider-rating-text {
+    font-size: 12px;
+  }
+  
+  .provider-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+    -webkit-line-clamp: 4;
+  }
+  
+  .read-more-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 70px 16px 25px;
+  }
+  
+  .main-hero-heading {
+    font-size: 22px;
+  }
+  
+  .subheading {
+    font-size: 14px;
+  }
+  
+  .service-card {
+    flex: 0 0 240px;
+    padding: 14px;
+  }
+  
+  .carousel-container {
+    padding: 0 16px;
+    gap: 10px;
+  }
+  
+  /* As Seen In Small Mobile */
+  .as-seen-in {
+    padding: 24px 16px;
+  }
+  
+ 
+  
+  .brand-logo {
+    min-width: 80px;
+  }
+  
+  .logo-text {
+    font-size: 11px;
+  }
+  
+  .rating-section-bottom {
+    gap: 16px;
+  }
+  
+  .rating-score {
+    font-size: 18px;
+  }
+  
+  .review-count {
+    font-size: 12px;
+  }
+  
+  .star {
+    font-size: 16px;
+  }
+  
+  /* Lawn Care Pros Small Mobile */
+  .lawn-care-pros-hero {
+    padding: 30px 16px;
+  }
+  
+  .pros-main-heading {
+    font-size: 28px;
+  }
+  
+  .pros-subheading {
+    font-size: 16px;
+  }
+  
+  .breadcrumb {
+    font-size: 11px;
+  }
+  
+  /* FAQ Small Mobile */
+  .faq-section {
+    padding: 40px 16px;
+  }
+  
+  .faq-main-heading {
+    font-size: 35px;
+  }
+  
+  .faq-subheading {
+    font-size: 14px;
+  }
+  
+  .faq-question {
+    padding: 14px 0;
+    font-size: 13px;
+  }
+  
+  .faq-answer p {
+    font-size: 12px;
+  }
+  
+  .see-all-faqs-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  /* Top Rated Providers Small Mobile Styles */
+  .top-rated-providers {
+    padding: 40px 16px;
+  }
+  
+  .providers-main-heading {
+    font-size: 24px;
+  }
+  
+  .provider-card {
+    /* padding: 16px; */
+  }
+  
+  .provider-pic {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .provider-name {
+    font-size: 14px;
+  }
+  
+  .hiring-count {
+    font-size: 12px;
+  }
+  
+  .provider-stars {
+    font-size: 18px;
+    line-height: 1
+  }
+  
+  .provider-rating-text {
+    font-size: 11px;
+  }
+  
+  .provider-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+    -webkit-line-clamp: 4;
+  }
+  
+  .read-more-link {
+    font-size: 16px;
+  }
+}
+
+/* How It Works Section */
+.how-it-works {
+  background: #E5FCF1;
+  padding: 80px 24px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-it-works-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header */
+.how-it-works-header {
+  margin-bottom: 14px;
+}
+
+.how-it-works-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.how-it-works-subtitle {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Step Container */
+.step-container {
+ 
+  position: relative;
+}
+
+/* Step Indicator */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  background: #61D15C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Step Content */
+.step-content {
+  position: relative;
+  
+}
+
+/* Step Image Container */
+.step-image-container-round {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #b8d6c8;
+  position: relative;
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Connecting Lines */
+.connecting-line {
+  width: 2px;
+  height: 80px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #019A5A 0px,
+    #019A5A 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  margin: 0 auto 0px;
+}
+
+/* Bottom CTA */
+.how-it-works-cta {
+  margin-top: 40px;
+}
+.how-it-works-cta-footer {
+  margin-top: 0px;
+  background-color: #fff;
+  padding-inline: 20px;
+  padding-block: 20px;
+}
+
+.how-cta-button {
+  background: #ff8c00;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 255px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  
+}
+
+.how-cta-button:hover {
+  background: #e67e00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
+}
+
+/* Mobile Responsive for How It Works */
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 60px 20px;
+  }
+  
+  .how-it-works-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .how-it-works-subtitle {
+    font-size: 18px;
+  }
+  
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .step-title {
+    font-size: 20px;
+  }
+  
+  .step-image-container-round {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .how-cta-button {
+    padding: 20px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .how-it-works {
+    padding: 40px 16px;
+  }
+  
+  .how-it-works-title {
+    font-size: 32px;
+  }
+  
+  .how-it-works-subtitle {
+    font-size: 16px;
+  }
+  
+  .step-image-container-round {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .how-cta-button {
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Pick Your Mowing Frequency Section */
+.pick-frequency {
+  background: white;
+  padding: 80px 0px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pick-frequency-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header */
+.pick-frequency-header {
+  margin-bottom: 40px;
+}
+
+.pick-frequency-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.pick-frequency-subtitle {
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Service Options */
+.service-options {
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.service-option {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  text-align: left;
+}
+
+.one-time-cuts {
+  background: #FFF3E0;
+  
+}
+
+.recurring-service {
+  background: #E8F5E8;
+ 
+}
+
+.service-icon {
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.icon-circle.orange {
+  background: #ff8c00;
+  color: white;
+}
+
+.icon-circle.green {
+  background: #019A5A;
+  color: white;
+}
+
+.recurring-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-option-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.service-option-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Service Separator */
+.service-separator {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111;
+ 
+}
+
+.separator-circle {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: 0.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/* Feature Comparison Table */
+.feature-comparison {
+  margin-bottom: 40px;
+
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-cell {
+  padding: 16px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  border-right: 1px solid white;
+}
+
+.header-cell:last-child {
+  border-right: none;
+}
+
+.feature-header {
+  text-align: left;
+}
+
+.table-body {
+  background: white;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row:last-child {
+  /* border-bottom: none; */
+}
+
+.feature-cell {
+  padding: 16px;
+  text-align: left;
+  color: #333;
+  font-weight: 500;
+  border-right: 1px solid white;
+}
+
+.check-cell {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid white;
+}
+
+.check-cell:last-child {
+  border-right: none;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  background: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.checkmark.empty {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* Savings Message */
+.savings-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.savings-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.savings-percentage {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: -8px;
+  color: #ff8c00;
+  
+}
+
+/* Mobile Responsive for Pick Frequency */
+@media (max-width: 480px) {
+  .pick-frequency {
+    padding: 60px 0px;
+  }
+  
+  .pick-frequency-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .pick-frequency-subtitle {
+    font-size: 18px;
+  }
+  
+  .service-option {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
+  .recurring-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .service-option-title {
+    font-size: 18px;
+  }
+  
+  .service-option-description {
+    font-size: 14px;
+  }
+  
+  .separator-circle {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  
+  .header-cell,
+  .feature-cell,
+  .check-cell {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+  
+  .savings-text {
+    font-size: 18px;
+  }
+  
+  .savings-percentage {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pick-frequency {
+    padding: 40px 0px;
+  }
+  
+  .pick-frequency-title {
+    font-size: 32px;
+  }
+  
+  .pick-frequency-subtitle {
+    font-size: 16px;
+  }
+  
+  .service-option {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+  
+  .recurring-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .service-option-title {
+    font-size: 18px;
+  }
+  
+  .service-option-description {
+    font-size: 13px;
+  }
+  
+  .separator-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+  
+  .header-cell,
+  .feature-cell,
+  .check-cell {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .checkmark {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+  
+  .savings-text {
+    font-size: 18px;
+  }
+  
+  .savings-percentage {
+    font-size: 18px;
+  }
+}
+
+/* Local Lawn Mowing Services Section */
+.local-lawn-services {
+  background: #8BBF41;
+  padding: 80px 24px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.local-lawn-services-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Main Title */
+.local-lawn-services-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Step Item */
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Step Icon */
+.step-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.step-icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  
+}
+
+/* Step Text */
+.step-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive for Local Lawn Services */
+@media (max-width: 768px) {
+  .local-lawn-services {
+    padding: 60px 20px;
+  }
+  
+  .local-lawn-services-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  
+  .steps-container {
+    gap: 50px;
+  }
+  
+
+  
+  
+  .step-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .local-lawn-services {
+    padding: 40px 16px;
+  }
+  
+  .local-lawn-services-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .steps-container {
+    gap: 40px;
+  }
+  
+
+  
+  
+  .step-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .local-lawn-services {
+    padding: 30px 12px;
+  }
+  
+  .local-lawn-services-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .steps-container {
+    gap: 30px;
+  }
+  
+  
+
+  
+  .step-text {
+    font-size: 14px;
+  }
+}
+
+/* Promotional Section Styles */
+.promotional-section {
+  background-color: #18678C;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.promotional-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.promotional-header {
+  margin-bottom: 20px;
+}
+
+.promotional-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: start;
+}
+
+.highlight-text {
+  color: #FF6B35;
+}
+
+.promotional-description {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #fff;
+  opacity: 0.9;
+  text-align: start;
+}
+
+.video-section {
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.video-call-to-action {
+  margin-bottom: 30px;
+}
+
+.video-text {
+  font-size: 18px;
+  color: #FF9000;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: start;
+}
+
+.arrow-indicator {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: linear-gradient(45deg, #FF6B35, #FF8C42);
+  border-radius: 50%;
+  position: relative;
+}
+
+.arrow-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.video-player {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button svg {
+  margin-left: 4px;
+}
+
+.cta-section {
+  margin-top: 40px;
+}
+
+.see-prices-btn {
+  background: linear-gradient(135deg, #FF6B35, #FF8C42);
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.cta-section-rev{
+  margin-top: 3px !important;
+}
+
+
+.read-more-reviews-btn{
+  margin-top: -20px !important;
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+}
+
+.see-prices-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive Design for Promotional Section */
+@media (max-width: 768px) {
+  .promotional-section {
+    padding: 60px 0;
+  }
+  
+  .promotional-title {
+    font-size: 36px;
+  }
+  
+  .promotional-description {
+    font-size: 20px;
+  }
+  
+  .video-player {
+    max-width: 100%;
+  }
+  
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .see-prices-btn {
+    padding: 24px 32px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotional-section {
+    padding: 40px 0;
+  }
+  
+  .promotional-title {
+    font-size: 34px;
+  }
+  
+  .promotional-description {
+    font-size: 20px;
+  }
+  
+  .video-text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  
+  .arrow-indicator {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .arrow-indicator::after {
+    border-left-width: 6px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+  }
+  
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .see-prices-btn {
+    padding: 20px 28px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+/* GreenPal Network Ranking Section Styles */
+.image-green-tr-wrapper {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.image-green-tr{
+  width: 100%;
+    height: 100%;
+}
+.image-green-tq-wrapper {
+ padding-inline: 20px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.image-green-tq{
+  width: 100%;
+    height: 100%;
+}
+
+.network-ranking-section {
+  background-color: #F7F9FC;
+  padding: 80px 0;
+  color: #333;
+}
+
+.network-ranking-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.network-ranking-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.highlight-orange {
+  color: #FF6B35;
+}
+
+.network-ranking-description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+}
+
+/* Responsive Design for Network Ranking Section */
+@media (max-width: 768px) {
+  .network-ranking-section {
+    padding: 60px 0;
+  }
+  
+  .network-ranking-title {
+    font-size: 36px;
+  }
+  
+  .network-ranking-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .network-ranking-section {
+    padding: 40px 0;
+  }
+  
+  .network-ranking-title {
+    font-size: 34px;
+  }
+  
+  .network-ranking-description {
+    font-size: 16px;
+  }
+}
+
+/* Footer Styles */
+footer {
+    
+}
+
+.container_8 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 30px;
+    color: #fff !important;
+    background-color: #0A3755;
+}
+
+.container_9 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    background-color: #09324D;
+}
+
+ .footer_sec2 {
+    float: left;
+    width: 33.33%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+ .footer_sec3 {
+    float: left;
+    width: 33.33%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.footer_sec3_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.providers_section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.social_section {
+    flex: 1;
+    text-align: right;
+}
+
+.footer_sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 33.33%;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+
+.footer_logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-pera-list p {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.app-heading {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+
+.site-derictory {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer_imp_links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_imp_links li {
+    margin-bottom: 8px;
+}
+
+.footer_imp_links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer_imp_links a:hover {
+    color: #333;
+}
+
+.footer_social_links {
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0px;
+}
+
+.footer_social_links li {
+    margin: 0;
+}
+
+.footer_social_links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.footer_social_links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.footer_social_links img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.pinterest_logo_combined {
+    position: relative;
+}
+
+.pinterest_outer_wrapper {
+    position: relative;
+    display: block;
+}
+
+.pinterest_out {
+    width: 35px;
+    height: 35px;
+}
+
+.pinterest_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+/* Total satisfaction section */
+.total_satisfaction {
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 283px;
+  margin: 0 auto;
+ 
+  height: 85px;
+    position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .total_satisfaction p {
+      font-size: 9px !important;
+      margin-left: 0;
+      padding-right: 85px;
+      margin-top: 30px;
+      font-family: proxima_novasemibold;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: -webkit-fill-available;
+      position: absolute;
+      left: 56px;
+      color: #4E95BB;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer_sec3 p {
+      padding-left: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer_sec3 p {
+      padding-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer_sec3 p {
+      letter-spacing: normal;
+      font-size: 17px;
+  }
+}
+
+.footer_locations ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer_locations li {
+    margin-bottom: 5px;
+}
+
+.footer_locations a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+.footer_locations a:hover {
+    background: #ddd;
+}
+
+.footer_copyright {
+    background: #0A3755;
+    color: #fff !important;
+   
+}
+
+.footer_copyright ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_copyright .left {
+    float: left;
+}
+
+.footer_copyright .right {
+    float: right;
+}
+
+.footer_copyright li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer_copyright a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer_copyright a:hover {
+    color: #333;
+}
+
+.only_desktop {
+    display: block;
+}
+
+.only_mob {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+.footer_imp_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* default: single column */
+  gap: 8px;
+  line-height: 1.2;
+}
+.footer_imp_links_provider {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* default: single column */
+  gap: 8px;
+  line-height: 1.2;
+}
+
+.footer_imp_links li span {
+  display: block;
+}
+.footer_imp_links_provider li span {
+  display: block;
+}
+
+.footer_imp_links_provider li span {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer_imp_links_provider li span:hover {
+    opacity: 1;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+    .footer_sec1, .footer_sec2, .footer_sec3 {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .footer_sec3_top {
+       
+        gap: 20px;
+    }
+    
+    .providers_section {
+        margin-right: 0;
+       
+    }
+    
+    .social_section {
+        text-align: left;
+    }
+    
+    .footer_social_links {
+        justify-content: center;
+    }
+    
+    .footer_imp_links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer_imp_links_provider{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+   
+    .only_desktop {
+        display: none;
+    }
+
+    .only_mob {
+        display: block;
+    }
+
+    .footer_copyright .left,
+    .footer_copyright .right {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer_locations ul {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 480px) {
+    .container_8, .container_9 {
+        padding: 15px;
+        padding-top: 30px;
+    }
+
+    .footer_sec3_top {
+        gap: 15px;
+    }
+    
+    .footer_social_links li {
+        margin-right: 10px;
+    }
+}
+
+/* Quote Interface Styles */
+.quote-interface {
+  max-width: 500px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.quote-form {
+  
+}
+
+.quote-question {
+  margin-bottom: 10px;
+}
+
+.quote-question h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.dropdown-field {
+  position: relative;
+  border: 2px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 16px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-field:hover {
+  border-color: #FF6B35;
+}
+
+.selected-value {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-chevron {
+  color: #6B7280;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-field:hover .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.price-display {
+  background: #D7F3D6;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.price-context {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.price-details {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.see-prices-quote-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #FF6B35, #FF8C42);
+  color: #fff;
+  border: none;
+  padding: 28px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.see-prices-quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive Design for Quote Interface */
+@media (max-width: 768px) {
+  .quote-interface {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
+  .quote-form {
+    padding: 0px 24px;
+  }
+  
+  .price-amount {
+    font-size: 32px;
+  }
+  
+  .see-prices-quote-btn {
+    padding: 28px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-form {
+    padding: 0px 24px;
+  }
+  
+  .quote-question h3 {
+    font-size: 16px;
+  }
+  
+  .dropdown-field {
+    padding: 14px 16px;
+  }
+  
+  .selected-value {
+    font-size: 14px;
+  }
+  
+  .price-display {
+    padding: 24px 20px;
+  }
+  
+  .price-amount {
+    font-size: 28px;
+  }
+  
+  .price-context {
+    font-size: 14px;
+  }
+  
+  .price-details {
+    font-size: 12px;
+  }
+  
+  .see-prices-quote-btn {
+    padding: 20px 24px;
+    font-size: 16px;
+  }
+}
+
+/* User Reviews Section Styles */
+.user-reviews-section {
+  background: #fff;
+  padding: 80px 0;
+  color: #333;
+  text-align: center;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header Area */
+.reviews-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviews-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #333;
+  background: transparent;
+  text-align: center;
+}
+
+.overall-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stars-container {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 24px;
+  color: #E5E7EB;
+}
+
+.star.rev {
+  background-color: #fff !important;
+}
+
+.star.filled {
+  color: #FBBF24;
+}
+
+.star.half-filled {
+  color: #FBBF24;
+  position: relative;
+}
+
+.star.half-filled::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #FBBF24;
+}
+
+.review-count {
+  font-size: 18px;
+  color: #2563EB;
+  font-weight: 600;
+}
+
+/* Search and Filter Interface */
+.search-filter-interface {
+  margin-bottom: 20px;
+}
+
+.review-stars-rev{
+  gap: 0px !important;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-reviews-input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.search-reviews-input:focus {
+  outline: none;
+  border-color: #FF6B35;
+}
+
+.sort-container {
+  padding-inline: 16px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sort-dropdown {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.sort-dropdown:hover {
+  border-color: #FF6B35;
+}
+
+.sort-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.review-filters {
+  text-align: center;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 500;
+  padding-inline: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: #fff;
+  border: 1px solid #9CA3AF;
+  color: #2563EB;
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #DBEAFE;
+  border-color: #93C5FD;
+}
+
+/* Individual Review Cards */
+.reviews-list {
+  display: grid;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #fff;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+      flex-direction: column;
+  padding: 30px;
+  
+  transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  margin-bottom: 10px;
+}
+
+.review-rating {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* margin-bottom: 15px; */
+  gap: 12px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-stars .star {
+  font-size: 18px;
+}
+
+.review-stars .star.rev {
+  background-color: #fff !important;
+}
+
+.verification-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verified-text {
+  font-size: 14px;
+  color: #10B981;
+  font-weight: 500;
+}
+
+.review-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.location-text {
+  font-size: 14px;
+  color: #000;
+}
+
+.service-tag {
+  background: #F3F4F6;
+  color: #374151;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviewer-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #3B82F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-initials {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewer-details {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.review-date {
+  font-size: 14px;
+  color: #9CA3AF;
+}
+
+/* Responsive Design for User Reviews */
+@media (max-width: 768px) {
+  .user-reviews-section {
+    padding: 60px 0;
+  }
+  
+  .reviews-title {
+    font-size: 34px;
+  }
+  
+  .filter-buttons {
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+  
+  .review-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-reviews-section {
+    padding: 40px 0;
+  }
+  
+  .reviews-title {
+    font-size: 34px;
+  }
+
+  .search-reviews-input {
+    padding: 14px 14px 14px 44px;
+    font-size: 14px;
+  }
+  
+  .sort-dropdown {
+    padding: 10px 16px;
+  }
+  
+  .filter-buttons {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .review-card {
+    padding: 20px;
+  }
+  
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .avatar-initials {
+    font-size: 16px;
+  }
+}
+
+/* How does GreenPal Work Section */
+.how-greenpal-works {
+  background-color: #EFFEEE;
+  padding: 80px 0;
+  margin: 0;
+}
+
+.how-greenpal-works-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.how-greenpal-works-header {
+  margin-bottom: 20px;
+}
+
+.how-greenpal-works-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #374151;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.how-greenpal-works-image {
+  margin-bottom: 10px;
+}
+
+.lawn-service-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.how-greenpal-works-description {
+  max-width: 800px;
+  margin: 0 auto 0px;
+}
+
+.how-greenpal-works-description p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+}
+
+.how-greenpal-works-cta {
+  margin-top: 0px;
+}
+/* container you add around the paragraph/content */
+.read-more-glass {
+  position: relative;
+  /* create stacking context (helps consistency) */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* make the real content sit below the overlay */
+.read-more-glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* the glass fade overlay at the bottom */
+.read-more-glass::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25px;                    
+  z-index: 2;                      
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.30) 100%
+  );
+  /* the actual frosted glass effect */
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%); /* Safari */
+  /* optional soft edge if your container has rounded corners */
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+/* Fallback: when backdrop-filter is unsupported, make the fade a bit stronger */
+@supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+  .read-more-glass::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.60) 100%
+    );
+  }
+}
+
+.nearby-cities-list {
+  list-style: none;      /* remove bullets */
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 500;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  /* gap: 12px; */ /* you can uncomment and adjust gap later */
+}
+
+.zip-code-list {
+  list-style: none;        /* remove bullets */
+  margin: 0;
+  padding: 0;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 per row */
+  /* gap: 10px; */ /* adjust later if needed */
+  text-align: center;
+}
+
+.zip-code-list li {
+  padding: 4px 0; /* minimal spacing inside each cell */
+}
+
+.see-prices-btn-about{
+  margin-top: 8px;
+  background: #ff8c00;
+  border: none;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 255px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  
+}
+
+.zip-codes-text{
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.2;
+}
+.nearby-cities-list .nearby-location {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.read-more-btn {
+width: 100%;
+background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 8888px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #374151;
+  color: #f0f8f0;
+}
+
+@media (max-width: 768px) {
+  .how-greenpal-works {
+    padding: 60px 0;
+  }
+  
+  .how-greenpal-works-title {
+    font-size: 36px;
+  }
+  
+  .how-greenpal-works-description p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-greenpal-works {
+    padding: 40px 0;
+  }
+  
+  .how-greenpal-works-title {
+    font-size: 28px;
+  }
+  
+  .how-greenpal-works-description p {
+    font-size: 18px;
+  }
+  
+  .read-more-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .how-greenpal-works-title {
+    font-size: 24px;
+  }
+  
+  .how-greenpal-works-description p {
+    font-size: 18px;
+  }
+}
+
+/* Recent Lawns Mowed Section */
+.recent-lawns-mowed {
+  background-color: #fff;
+  padding: 80px 0;
+  margin: 0;
+}
+
+.recent-lawns-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.recent-lawns-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recent-lawns-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #374151;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+}
+
+.recent-lawns-subtitle {
+  font-size: 18px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.recent-lawns-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.recent-lawns-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.recent-lawn-card {
+  width: 350px;
+  max-width: 350px;
+  background: white;
+
+  overflow: hidden;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.card-image-container {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card-house-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+ 
+}
+
+.card-price-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff8c00;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.card-details {
+  padding-top: 10px;
+}
+
+.card-service-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 7px 0;
+  line-height: 1.3;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.color-grey{
+  color: #6B7280;
+}
+
+.card-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: #6B7280;
+  font-size: 14px;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.location-icon {
+  flex-shrink: 0;
+}
+
+.card-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.info-icon {
+  flex-shrink: 0;
+}
+
+.card-request-box {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.card-request-box p {
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.recent-lawns-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0 30px 0;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+  background: #374151;
+}
+
+.recent-lawns-cta {
+  text-align: center;
+}
+
+.see-prices-recent-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff6b35);
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 8888px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.see-prices-recent-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .recent-lawns-mowed {
+    padding: 60px 0;
+  }
+  
+  .recent-lawns-title {
+    font-size: 36px;
+  }
+  
+  .recent-lawns-subtitle {
+    font-size: 16px;
+  }
+  
+  .recent-lawn-card {
+    width: 300px;
+    max-width: 300px;
+  }
+  
+  /* .card-details {
+    padding: 20px;
+  }
+   */
+  .card-service-title {
+    font-size: 18px;
+  }
+  
+  .see-prices-recent-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-lawns-mowed {
+    padding: 40px 0;
+  }
+  
+  .recent-lawns-title {
+    font-size: 28px;
+  }
+  
+  .recent-lawns-subtitle {
+    font-size: 15px;
+  }
+  
+  .recent-lawns-carousel {
+    gap: 20px;
+  }
+  
+  .recent-lawn-card {
+    width: 280px;
+    max-width: 280px;
+  }
+  
+  /* .card-details {
+    padding: 18px;
+  } */
+  
+  .card-service-title {
+    font-size: 16px;
+  }
+  
+  .card-info-item {
+    font-size: 13px;
+  }
+  
+  .card-request-box p {
+    font-size: 13px;
+  }
+  
+  .see-prices-recent-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .recent-lawns-title {
+    font-size: 24px;
+  }
+  
+  .recent-lawn-card {
+    width: 260px;
+    max-width: 260px;
+  }
+  
+  /* .card-details {
+    padding: 15px;
+  } */
+  
+  .card-service-title {
+    font-size: 15px;
+  }
+  
+  .card-info-item {
+    font-size: 12px;
+  }
+  
+  .card-request-box p {
+    font-size: 12px;
+  }
+}
+
+
+
+.leader-board-section{
+  background-color: #ECF9FE !important;
+}
+
+.leader-board-btn{
+  
+  background: #fff !important;
+  border: 1px solid #ff8c00 !important;
+  color: #ff8c00 !important;
+
+}
+
+.provider-card{
+  background-color: #fff;
+  padding:  20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 270px;
+
+}
+.rank-name{
+  position: relative;
+  width: 100
+  ;
+}
+
+.profile-section{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-badge{
+  position: absolute;
+  left: -50px;          
+  top: 40%;         
+  transform: translateY(-50%); 
+
+}
+
+.ranked-text{
+  color: #ff8c00;
+}
+
+.company-name{
+  text-align: center;
+}
+
+.price-badge-mower{
+  margin-block: 8px;
+  background: #F9F1EC;
+  color: #ff8c00;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+.metrics-section {
+  padding-block: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 12px; /* adjust spacing between items */
+
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.metric-text{
+  color: #9FC15D;
+}
+
+.services-title{
+  text-align: left;
+  font-weight: 500;
+}
+
+.services-section{
+  align-self: flex-start;
+  padding-block: 12px;
+}
+
+.view-services-link{
+  color: #ff8c00;
+}

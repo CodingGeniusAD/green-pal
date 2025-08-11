@@ -1,0 +1,33 @@
+# Render-optimized Dockerfile for static Rails app
+FROM ruby:3.3.4-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+    build-essential \
+    nodejs \
+    npm \
+    sqlite3 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy Gemfile and install gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle install --without development test
+
+# Copy application code
+COPY . .
+
+# Precompile assets
+RUN SECRET_KEY_BASE=dummy RAILS_ENV=production bundle exec rails assets:precompile
+
+# Create database (Render requirement)
+RUN bundle exec rails db:create db:migrate RAILS_ENV=production
+
+# Expose port (Render will set PORT environment variable)
+EXPOSE 3000
+
+# Start Rails server
+CMD ["bundle", "exec", "rails", "server", "-e", "production", "-p", "3000"] 
