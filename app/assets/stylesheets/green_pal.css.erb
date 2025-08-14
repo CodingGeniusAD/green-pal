@@ -6,17 +6,15 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.6;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
+  font-family: proxima-nova, poppins, sans-serif;
+  
   overflow-x: hidden;
 }
 
 /* Hero Section */
 .hero {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assests/green-grass-field-background.jpg") center/cover no-repeat; */
-  
-
-
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("<%= asset_path('green-grass-field-background.jpg') %>") center/cover no-repeat;
   min-height: 100vh;
   color: white;
   position: relative;
@@ -24,13 +22,19 @@ body {
   flex-direction: column;
 }
 
+.blur-wrapper{
+  backdrop-filter: blur(2px);
+}
+
+
 /* Header */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
-
+  padding-inline:24px;
+  padding-top: 40px ;
+  padding-bottom: 20px;
   z-index: 100;
 
 }
@@ -47,11 +51,16 @@ body {
   border: none;
   color: white;
   padding: 12px 20px;
-  border-radius: 25px;
+  border-radius: 255px;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
   transition: all 0.3s ease;
+}
+
+.btn-header{
+  height: 48px;
+  /* max-width: 132pxs; */
 }
 
 .btn:hover {
@@ -73,7 +82,7 @@ body {
 }
 
 .main-hero-heading {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.2;
@@ -82,20 +91,20 @@ body {
 .subheading {
   font-size: 18px;
   margin-bottom: 32px;
-  color: #f0f0f0;
+  color: #fff;
   font-weight: 400;
 }
 
 .cta-text {
   font-size: 16px;
   margin: 20px 0;
-  color: #f0f0f0;
+  color: #fff;
   font-weight: 500;
 }
 .cta-text-form {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 20px;
-  color: #f0f0f0;
+  color: #fff;
   font-weight: 500;
   text-align: center;
 }
@@ -109,10 +118,11 @@ body {
 
 .field-house {
   width: 100%;
-  padding: 16px 20px;
-  border-radius: 25px;
+  padding-inline:20px;
+  height: 67px;
+  border-radius: 255px;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
   margin-bottom: 12px;
   text-align: center;
@@ -124,20 +134,26 @@ body {
   color: #999;
 }
 
-.btn-main {
+.btn-main-hero {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  align-items: center;
   width: 100%;
   padding: 16px 20px;
-  font-size: 16px;
+  height: 67px;
+  font-size: 18px;
   font-weight: 700;
-  background: #ff8c00;
-  border-radius: 25px;
+    background: linear-gradient(to bottom, #FFA500, #FF7A00);
+
+  border-radius: 255px;
   border: none;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn-main:hover {
+.btn-main-hero:hover {
   background: #e67e00;
   transform: translateY(-1px);
 }
@@ -167,7 +183,7 @@ body {
 /* Service Cards */
 .service-card {
   flex: 0 0 280px;
-  background: white;
+  background: #F7F7F7;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -180,18 +196,17 @@ body {
   margin-left: 0;
 }
 
+.profile-section-hero
+{
+  align-items: self-start !important;
+}
+
 /* Price Badge */
 .price-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: #ff8c00;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+  top: 0px;
+  right: 14px;
+  
 }
 
 .price-amount {
@@ -212,7 +227,7 @@ body {
   display: flex;
   align-items: start;
  
-  gap: 12px;
+  gap: 14px;
 }
 
 .profile-pic {
@@ -226,8 +241,8 @@ body {
 
 .online-status-1{
   display: flex;
-  align-items: center;
-  gap: 8px;
+  /* align-items: center; */
+  gap: 4px;
   align-self: start;
 }
 
@@ -241,14 +256,19 @@ body {
 }
 
 .status-dot {
-  width: 6px;
-  height: 6px;
-  background: #28a745;
+  /* width: 10px;
+  height: 10px;  */
+  /* background-color: #61d15c; */
   border-radius: 50%;
   display: inline-block;
 }
 
 .status-text {
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+}
+.status-text-hero {
   font-size: 12px;
   color: #000;
   font-weight: 500;
@@ -266,25 +286,52 @@ body {
   
 }
 
+.rating-section-hero {
+
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  gap: 3px;
+  
+}
 .rating-section {
+  
   display: flex;
   align-items: center;
   gap: 6px;
   
 }
-
+.stars-hero-cards{
+  display: flex;
+  gap: 1px;
+}
 .stars {
   color: #ffc107;
   font-size: 14px;
   letter-spacing: 1px;
   
 }
-
+.star-seen{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: anchor-center;
+  justify-content: center;
+  gap:1px;
+  background-color: #34AC7A;
+}
 .rating-text {
   font-size: 12px;
   color: #6c757d;
 }
-
+.price-info-hero {
+  display: flex;
+  margin-top: 3px;
+  /* align-items: center; */
+  gap: 3px;
+  font-size: 12px;
+  color: #495057;
+}
 .price-info {
   display: flex;
   align-items: center;
@@ -293,8 +340,9 @@ body {
   color: #495057;
 }
 
+
 .dollar-icon {
-  color: #28a745;
+  color: #ACC973 !important;
   font-weight: 700;
   font-size: 14px;
 }
@@ -305,14 +353,15 @@ body {
 }
 
 /* Card Button */
-.card-btn {
+.card-btn-hero {
   margin-top: 4px;
+  height: 40px;
   align-self: start;
-  background: white;
+  background: transparent;
   border: 1px solid #000;
   color: #495057;
   padding: 12px 20px;
-  border-radius: 50px;
+  border-radius: 504px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
@@ -350,7 +399,7 @@ body {
 .as-seen-in {
   background: #019A5A;
   color: white;
-  padding-block: 12px;
+  padding-top: 25px;
 }
 
 .as-seen-in-content {
@@ -361,13 +410,12 @@ body {
 /* Publications Section */
 .publications-section {
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .as-seen-in-title {
   font-size: 30x;
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
   color: white;
 }
 
@@ -376,8 +424,8 @@ body {
   display: flex;
   overflow-x: auto ;
   /* scroll-snap-type: x mandatory; */
-  gap: 20px;
-  padding: 0 40px;
+  gap: 33px;
+  padding: 0 45px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   justify-content: flex-start;
@@ -395,7 +443,6 @@ body {
   gap: 2px;
   flex-shrink: 0;
   scroll-snap-align: start;
-  min-width: 120px;
 }
 
 .logo-text {
@@ -420,7 +467,8 @@ body {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
 
 .rating-info {
@@ -432,19 +480,25 @@ body {
 .rating-score {
   font-size: 24px;
   font-weight: 700;
-  color: white;
+  color: #E6F7EF;
 }
 
-.review-count {
+.review-count-seen {
   font-size: 16px;
-  color: white;
-  opacity: 0.9;
+  color: #E6F7EF;
+  list-style: 1;
+ 
 }
 
 .rating-stars {
   display: flex;
   gap: 2px;
 }
+.card-service-house{
+  font-size: 14px;
+
+}
+
 
 .star {
   color: #ffc107;
@@ -458,9 +512,8 @@ body {
 
 /* Lawn Care Pros Hero Section */
 .lawn-care-pros-hero {
-  background: #f0f8ff;
+  background: #E5F6FD;
   padding: 60px 24px;
-  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,6 +572,17 @@ body {
 .search-container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.search-input-first{
+  text-align: start !important;
+  padding-left: 33px !important;
+  color: #000 !important;
+}
+.search-input-first::placeholder{
+  opacity: 0.7 !important;
+  color: #000 !important;
+  font-size: 16px !important;
 }
 
 .search-input-wrapper {
@@ -598,19 +662,16 @@ body {
   
   
 }
-.highlighted-text::after {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  width: 100%;
-  height: 30%; /* only bottom 20% */
-  background: linear-gradient(
-    to top,
-    #61D15C 0%,         /* solid green at bottom */
-    rgba(97, 209, 92, 0) 100%  /* fade to transparent */
-  );
-  z-index: 0;
+.highlighted-text::after  {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 36%;
+    background: #61D15C;
+    opacity: 0.8;
+    z-index: 0;
 }
 
 /* keep content above gradient */
@@ -774,10 +835,7 @@ footer{
   line-height: 1.2;
 }
 
-/* Provider Card */
-.provider-card {
- 
-}
+
 
 .provider-profile {
   display: flex;
@@ -813,6 +871,14 @@ footer{
   margin-bottom: 8px;
   line-height: 1.3;
 }
+.provider-name-qa {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
 
 .hiring-count {
   font-size: 14px;
@@ -820,12 +886,28 @@ footer{
   color: #333;
   margin-bottom: 3px;
 }
-
+.hiring-count-qa {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+}
 .provider-rating {
   display: flex;
   align-items: start;
   flex-direction: column;
-  
+}
+.provider-rating-movers {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 8px;
+  gap: 3px;
+}
+
+.provider-stars-movers{
+  display: flex;
+  gap: 1px;
 }
 
 .provider-stars {
@@ -892,6 +974,11 @@ footer{
   text-overflow: ellipsis;
   max-width: 100%;
 }
+.speechmarks{
+      margin-right: 6px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
 
 .testimonial-text::after {
   content: '';
@@ -899,7 +986,7 @@ footer{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 50px;
   background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
   pointer-events: none;
 }
@@ -918,18 +1005,13 @@ footer{
 
 /* Responsive Design for Mobile */
 @media (max-width: 480px) {
-  .main-header {
-    padding: 40px 24px;
-  }
+ 
   
   .logo {
     font-size: 20px;
   }
   
-  .btn {
-    padding: 10px 16px;
-    font-size: 12px;
-  }
+  
   
   .hero-content {
     padding-inline: 24px;
@@ -937,31 +1019,15 @@ footer{
   }
   
   .main-hero-heading {
-    font-size: 32px;
+    font-size: 35px;
   }
   
   .subheading {
     font-size: 18px;
   }
   
-  .cta-text {
-    font-size: 14px;
-  }
   
-  .field-house {
-    padding: 14px 18px;
-    font-size: 14px;
-  }
-  
-  .btn-main {
-    padding: 14px 18px;
-    font-size: 14px;
-  }
-  
-  .service-card {
-    flex: 0 0 260px;
-    padding: 16px;
-  }
+
   
   .profile-pic {
     width: 45px;
@@ -980,15 +1046,8 @@ footer{
     font-size: 11px;
   }
   
-  .price-info {
-    font-size: 11px;
-  }
   
-  .card-btn {
-    padding: 10px 16px;
-    font-size: 12px;
-  }
-  
+
   .carousel-container {
     padding: 0 20px;
     gap: 12px;
@@ -1007,17 +1066,9 @@ footer{
   .as-seen-in {
     
   }
+
   
-  .as-seen-in-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
   
- 
-  
-  .brand-logo {
-    min-width: 100px;
-  }
   
   .logo-text {
     font-size: 12px;
@@ -1027,10 +1078,7 @@ footer{
     font-size: 30px;
   }
   
-  .review-count {
-    font-size: 14px;
-    line-height: 14px;
-  }
+ 
   
   .star {
     font-size: 18px;
@@ -1043,7 +1091,6 @@ footer{
   /* Lawn Care Pros Mobile Styles */
   .lawn-care-pros-hero {
     padding: 40px 20px;
-    min-height: 50vh;
   }
   
   .pros-main-heading {
@@ -1080,9 +1127,7 @@ footer{
     margin-bottom: 16px;
   }
   
-  .faq-subheading {
-    font-size: 16px;
-  }
+ 
   
   .faq-question {
     padding: 16px 0;
@@ -1109,9 +1154,7 @@ footer{
     margin-bottom: 30px;
   }
   
-  .provider-card {
-    
-  }
+ 
  
   
   .provider-pic {
@@ -1119,13 +1162,8 @@ footer{
     height: 90px;
   }
   
-  .provider-name {
-    font-size: 16px;
-  }
   
-  .hiring-count {
-    font-size: 16px;
-  }
+  
   
   .provider-stars {
     font-size: 18px;
@@ -1164,42 +1202,30 @@ footer{
     font-size: 14px;
   }
   
-  .service-card {
-    flex: 0 0 240px;
-    padding: 14px;
-  }
+
   
   .carousel-container {
     padding: 0 16px;
     gap: 10px;
   }
   
-  /* As Seen In Small Mobile */
-  .as-seen-in {
-    padding: 24px 16px;
-  }
+  
   
  
   
-  .brand-logo {
-    min-width: 80px;
-  }
+ 
   
   .logo-text {
     font-size: 11px;
   }
   
-  .rating-section-bottom {
-    gap: 16px;
-  }
+  
   
   .rating-score {
     font-size: 18px;
   }
   
-  .review-count {
-    font-size: 12px;
-  }
+ 
   
   .star {
     font-size: 16px;
@@ -1231,9 +1257,7 @@ footer{
     font-size: 35px;
   }
   
-  .faq-subheading {
-    font-size: 14px;
-  }
+ 
   
   .faq-question {
     padding: 14px 0;
@@ -1258,22 +1282,15 @@ footer{
     font-size: 24px;
   }
   
-  .provider-card {
-    /* padding: 16px; */
-  }
+  
   
   .provider-pic {
     width: 45px;
     height: 45px;
   }
   
-  .provider-name {
-    font-size: 14px;
-  }
-  
-  .hiring-count {
-    font-size: 12px;
-  }
+ 
+ 
   
   .provider-stars {
     font-size: 18px;
@@ -1336,8 +1353,11 @@ footer{
 
 /* Step Container */
 .step-container {
- 
   position: relative;
+}
+
+.step-container-second{
+  margin-top: -16px;
 }
 
 /* Step Indicator */
@@ -1381,7 +1401,7 @@ footer{
   border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
-  border: 2px solid #b8d6c8;
+  border: 4px solid #b8d6c8;
   position: relative;
 }
 
@@ -1394,16 +1414,7 @@ footer{
 
 /* Connecting Lines */
 .connecting-line {
-  width: 2px;
-  height: 80px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #019A5A 0px,
-    #019A5A 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  margin: 0 auto 0px;
+  
 }
 
 /* Bottom CTA */
@@ -1621,7 +1632,9 @@ footer{
   height: 20px;
   background: #fff;
   border-radius: 50%;
-  border: 0.5px solid #000;
+  /* border: 0.5px solid #000; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15),
+            0 2px 4px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1725,9 +1738,9 @@ footer{
 }
 
 .savings-percentage {
-  font-size: 36px;
-  font-weight: 700;
-  margin-top: -8px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: -2px;
   color: #ff8c00;
   
 }
@@ -1794,9 +1807,10 @@ footer{
     font-size: 18px;
   }
   
-  .savings-percentage {
-    font-size: 18px;
-  }
+  
+
+
+  
 }
 
 @media (max-width: 360px) {
@@ -1859,15 +1873,14 @@ footer{
     font-size: 18px;
   }
   
-  .savings-percentage {
-    font-size: 18px;
-  }
+ 
 }
 
 /* Local Lawn Mowing Services Section */
 .local-lawn-services {
-  background: #8BBF41;
-  padding: 80px 24px;
+  background: linear-gradient(to bottom, #8dc040, #42a042);
+
+  padding: 40px 24px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1881,16 +1894,20 @@ footer{
 }
 
 /* Main Title */
+
 .local-lawn-services-title {
-  font-size: 48px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 60px;
-  line-height: 1.2;
+    font-size: 31px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 60px;
+    line-height: 1.2;
+    max-width: 283px;
+    margin: 0 auto;
 }
 
 /* Steps Container */
 .steps-container {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -1902,7 +1919,7 @@ footer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 /* Step Icon */
@@ -1912,8 +1929,8 @@ footer{
 }
 
 .step-icon-circle {
-  width: 120px;
-  height: 120px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1933,77 +1950,41 @@ footer{
 /* Step Text */
 .step-text {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   color: white;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 /* Mobile Responsive for Local Lawn Services */
 @media (max-width: 768px) {
-  .local-lawn-services {
-    padding: 60px 20px;
-  }
   
-  .local-lawn-services-title {
-    font-size: 36px;
-    margin-bottom: 50px;
-  }
   
-  .steps-container {
-    gap: 50px;
-  }
   
+ 
+ 
 
-  
-  
-  .step-text {
-    font-size: 18px;
-  }
 }
 
 @media (max-width: 480px) {
-  .local-lawn-services {
-    padding: 40px 16px;
-  }
   
-  .local-lawn-services-title {
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
   
-  .steps-container {
-    gap: 40px;
-  }
-  
+ 
+ 
 
   
-  
-  .step-text {
-    font-size: 16px;
-  }
+
 }
 
 @media (max-width: 360px) {
-  .local-lawn-services {
-    padding: 30px 12px;
-  }
   
-  .local-lawn-services-title {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
   
-  .steps-container {
-    gap: 30px;
-  }
+  
+  
+  
   
   
 
-  
-  .step-text {
-    font-size: 14px;
-  }
 }
 
 /* Promotional Section Styles */
@@ -2143,7 +2124,7 @@ footer{
 
 
 .cta-section-rev{
-  margin-top: 3px !important;
+  /* margin-top: 3px !important; */
 }
 
 
@@ -2377,7 +2358,7 @@ footer {
 .footer_logo {
     max-width: 150px;
     height: auto;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .footer-pera-list p {
@@ -2606,7 +2587,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr; /* default: single column */
   gap: 8px;
+  white-space: nowrap;
   line-height: 1.2;
+  font-size: 12px;
 }
 .footer_imp_links_provider {
   list-style: none;
@@ -2615,6 +2598,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr; /* default: single column */
   gap: 8px;
+  white-space: nowrap;
+  font: 12px;
   line-height: 1.2;
 }
 
@@ -2710,7 +2695,6 @@ footer {
 .quote-interface {
   max-width: 500px;
   margin: 20px auto 0;
-  padding: 0 20px;
 }
 
 .quote-form {
@@ -2732,7 +2716,7 @@ footer {
 .dropdown-field {
   position: relative;
   border: 2px solid #E5E7EB;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 16px 20px;
   background: #fff;
   cursor: pointer;
@@ -2771,7 +2755,7 @@ footer {
 
 .price-amount {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 800;
   color: #333;
   margin-bottom: 8px;
 }
@@ -2783,8 +2767,9 @@ footer {
 }
 
 .price-details {
+  margin-top: 16px;
   font-size: 14px;
-  color: #666;
+  color: #000;
   line-height: 1.4;
 }
 
@@ -2811,7 +2796,6 @@ footer {
 @media (max-width: 768px) {
   .quote-interface {
     max-width: 100%;
-    padding: 0 16px;
   }
   
   .quote-form {
@@ -2906,7 +2890,7 @@ footer {
 
 .stars-container {
   display: flex;
-  gap: 2px;
+  gap: 4px;
 }
 
 .star {
@@ -2938,8 +2922,8 @@ footer {
 }
 
 .review-count {
-  font-size: 18px;
-  color: #2563EB;
+  font-size: 16px;
+  color: #06A5E8;
   font-weight: 600;
 }
 
@@ -2949,7 +2933,7 @@ footer {
 }
 
 .review-stars-rev{
-  gap: 0px !important;
+  gap: 3px !important;
 }
 
 .search-container {
@@ -2971,7 +2955,7 @@ footer {
 
 .search-reviews-input {
   width: 100%;
-  padding: 16px 16px 16px 48px;
+  padding: 16px 16px 16px 32px;
   border: 2px solid #E5E7EB;
   border-radius: 12px;
   font-size: 16px;
@@ -3055,7 +3039,7 @@ footer {
 /* Individual Review Cards */
 .reviews-list {
   display: grid;
-  gap: 30px;
+  /* gap: 30px; */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -3102,12 +3086,12 @@ footer {
 .verification-badge {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 }
 
 .verified-text {
   font-size: 14px;
-  color: #10B981;
+  color: #8FB741;
   font-weight: 500;
 }
 
@@ -3223,10 +3207,7 @@ footer {
     font-size: 34px;
   }
 
-  .search-reviews-input {
-    padding: 14px 14px 14px 44px;
-    font-size: 14px;
-  }
+ 
   
   .sort-dropdown {
     padding: 10px 16px;
@@ -3354,16 +3335,63 @@ footer {
     );
   }
 }
+/* container you add around the paragraph/content */
+.read-more-glass-reviewer {
+  position: relative;
+  /* create stacking context (helps consistency) */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* make the real content sit below the overlay */
+.read-more-glass-reviewer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* the glass fade overlay at the bottom */
+.read-more-glass-reviewer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;                    
+  z-index: 2;                      
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.30) 100%
+  );
+  /* the actual frosted glass effect */
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%); /* Safari */
+  /* optional soft edge if your container has rounded corners */
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+/* Fallback: when backdrop-filter is unsupported, make the fade a bit stronger */
+@supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+  .read-more-glass-reviewer::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.60) 100%
+    );
+  }
+}
 
 .nearby-cities-list {
-  list-style: none;      /* remove bullets */
-  margin: 0;
+  list-style: none;      
+  margin-top: 30px;
   padding: 0;
   text-align: left;
   font-weight: 500;
   display: grid; 
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  /* gap: 12px; */ /* you can uncomment and adjust gap later */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 12px; 
 }
 
 .zip-code-list {
@@ -3373,7 +3401,7 @@ footer {
   
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 per row */
-  /* gap: 10px; */ /* adjust later if needed */
+  gap: 8px;
   text-align: center;
 }
 
@@ -3398,8 +3426,10 @@ footer {
 
 .zip-codes-text{
   margin-top: 30px;
+  margin-bottom: 24px;
+  font-weight: 600;
   font-size: 20px;
-  font-weight: 500;
+
   text-align: left;
   line-height: 1.2;
 }
@@ -3408,6 +3438,10 @@ footer {
   padding: 0;
 }
 
+.nearby-location-first{
+   font-size: 16px;
+   font-weight: 600;
+}
 
 
 .read-more-btn {
@@ -3486,11 +3520,11 @@ background-color: transparent;
 
 .recent-lawns-header {
   text-align: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .recent-lawns-title {
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 700;
   color: #374151;
   line-height: 1.2;
@@ -3567,11 +3601,12 @@ background-color: transparent;
 
 .card-service-title {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
+
   font-weight: 700;
   color: #374151;
-  margin: 0 0 7px 0;
-  line-height: 1.3;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
   word-wrap: break-word;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -3579,6 +3614,8 @@ background-color: transparent;
 
 .color-grey{
   color: #6B7280;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .card-location {
@@ -3600,7 +3637,7 @@ background-color: transparent;
 
 .card-info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: anchor-center;
   gap: 8px;
   margin-bottom: 8px;
   color: #000;
@@ -3616,8 +3653,8 @@ background-color: transparent;
 }
 
 .card-request-box {
-  background: #f3f4f6;
-  border-radius: 8px;
+  background: #EFF3F8;
+  border-radius: 0px 24px 24px 24px;
   padding: 15px;
   margin-top: 15px;
 }
@@ -3680,10 +3717,7 @@ background-color: transparent;
     padding: 60px 0;
   }
   
-  .recent-lawns-title {
-    font-size: 36px;
-  }
-  
+ 
   .recent-lawns-subtitle {
     font-size: 16px;
   }
@@ -3697,9 +3731,7 @@ background-color: transparent;
     padding: 20px;
   }
    */
-  .card-service-title {
-    font-size: 18px;
-  }
+ 
   
   .see-prices-recent-btn {
     padding: 14px 28px;
@@ -3712,9 +3744,7 @@ background-color: transparent;
     padding: 40px 0;
   }
   
-  .recent-lawns-title {
-    font-size: 28px;
-  }
+
   
   .recent-lawns-subtitle {
     font-size: 15px;
@@ -3733,9 +3763,7 @@ background-color: transparent;
     padding: 18px;
   } */
   
-  .card-service-title {
-    font-size: 16px;
-  }
+ 
   
   .card-info-item {
     font-size: 13px;
@@ -3752,9 +3780,8 @@ background-color: transparent;
 }
 
 @media (max-width: 360px) {
-  .recent-lawns-title {
-    font-size: 24px;
-  }
+
+  
   
   .recent-lawn-card {
     width: 260px;
@@ -3765,10 +3792,7 @@ background-color: transparent;
     padding: 15px;
   } */
   
-  .card-service-title {
-    font-size: 15px;
-  }
-  
+
   .card-info-item {
     font-size: 12px;
   }
@@ -3801,8 +3825,20 @@ background-color: transparent;
   min-width: 270px;
 
 }
+.provider-card-mowers{
+  background-color: #fff;
+  border :1px solid #E1ECF1;
+  border-radius: 4px;
+  padding:  20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+
+}
 .rank-name{
   position: relative;
+  padding-top: 5px;
   width: 100
   ;
 }
@@ -3813,21 +3849,51 @@ background-color: transparent;
   flex-direction: column;
   align-items: center;
 }
-
+.profile-section-mowers{
+  gap:0px !important;
+}
 .rank-badge{
   position: absolute;
   left: -50px;          
-  top: 40%;         
+  top: 50%;         
   transform: translateY(-50%); 
-
+  font-size: 25px;
+}
+.provider-pic-mowers{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.mowers-picture{
+  width: 90px;
+  padding: 2px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1.5px solid #EEB803;
 }
 
 .ranked-text{
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 14px;
   color: #ff8c00;
 }
 
 .company-name{
+  font-weight: 400;
+  font-size: 20px;
   text-align: center;
+  margin-top: 2px;
+}
+
+.stars-mowers{
+    margin-top: 2px;
+    display: flex;
+    gap: 5px;
+}
+.reliability-rating{
+  margin-top: 8px;
 }
 
 .price-badge-mower{
@@ -3837,7 +3903,7 @@ background-color: transparent;
   padding: 8px 12px;
   border-radius: 8px;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
 
 }
@@ -3847,18 +3913,39 @@ background-color: transparent;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: repeat(2, auto);   /* 2 rows */
-  gap: 12px; /* adjust spacing between items */
+  row-gap: 12px; /* adjust spacing between items */
+  column-gap: 30px; /* adjust spacing between items */
 
   border-bottom: 1px solid #E5E7EB;
 }
+.metric-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
 
 .metric-text{
-  color: #9FC15D;
+  color: #658F34;
+  font-weight: 500;
 }
 
 .services-title{
   text-align: left;
   font-weight: 500;
+  font-size:18px;
+  margin-bottom: 6px;
+}
+.service-name1{
+  color: #838383;
+}
+.leaf-icon{
+  margin-left:-10px;
+}
+.service-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .services-section{
@@ -3868,4 +3955,6 @@ background-color: transparent;
 
 .view-services-link{
   color: #ff8c00;
+  margin-left: 64px;
+  font-weight: 500;
 }

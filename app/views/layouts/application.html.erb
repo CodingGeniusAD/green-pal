@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenPal - Your Eco-Friendly Companion</title>
-    <meta name="description" content="Discover sustainable living with GreenPal. Get tips, track your eco-impact, and join a community of environmentally conscious individuals.">
-    
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenPal - Your Eco-Friendly Companion</title>
+  <meta name="description" content="Discover sustainable living with GreenPal. Get tips, track your eco-impact, and join a community of environmentally conscious individuals.">
 
-  <body>
-    <div class="wrapper-mobile">
-      <!-- Main Content -->
-      <main>
-        <%= yield %>
-      </main>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-      <!-- Footer -->
-      <%= render 'layouts/footer' %>
-    </div>
-  </body>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+
+  <!-- Main Content -->
+  <main>
+    <%= yield %>
+  </main>
+
+  <!-- Footer -->
+  <%= render 'layouts/footer' %>
+</body>
+
 </html>

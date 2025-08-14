@@ -1,49 +1,58 @@
+<!-- Footer Section -->
 <footer>
   <div class="container_8">
     <div class="footer_sec1">
-      <%= image_tag 'greenPalLogo.png',
-                data: { src: asset_path('greenPalLogo.png') },
-              class: 'footer_logo lazyload el-hide',
-              alt: 'GreenPal Logo' %>
+      <img data-src="<%= asset_path('greenPalLogo.png') %>" src="<%= asset_path('greenPalLogo.png') %>" style="margin-bottom: 18px;" class="footer_logo lazyload el-hide" alt="GreenPal Logo">
+
       <noscript>
-        <img class="footer_logo" alt="GreenPal Logo" src="assests/greenPalLogo.png" />
+        <img class="footer_logo" style="margin-bottom: 3px;" alt="GreenPal Logo" src="<%= asset_path('greenPalLogo.png') %>" />
       </noscript>
       <div class="footer-pera-list">
-        <p>
-          GreenPal is hands-down the easiest way to book a local lawn care
-          company for yard maintenance services at an affordable price. If
-          you're looking for same day lawn mowing or next day lawn cutting
-          services you're at the right place.
+        <p>GreenPal is hands-down the easiest way to book a local lawn care company for yard maintenance services at an affordable price. If you're looking for same day lawn mowing or next day lawn cutting services you're at the right place.
         </p>
 
-        <p>
-          GreenPal is the easiest way to book a lawn mowing services near
-          me at the touch of a button without even having to make a phone
-          call.
-        </p>
+        <p>GreenPal is the easiest way to book a lawn mowing services near me at the touch of a button without even having to make a phone call.</p>
       </div>
 
-      <p class="app-heading only_desktop">
-        Get the remote control for your lawn
-      </p>
+
+      <p class="app-heading only_desktop">Get the remote control for your lawn</p>
       <ul class="iphone-btn only_desktop no-top">
         <li>
           <div class="play-store-sec">
-            <img data-src="assests/playstore.svg" class="app_logo only_desktop lazyload el-hide" alt="Play Store Logo" src="assests/playstore.svg" />
-            <noscript><img class="app_logo only_desktop" alt="Play Store Logo" src="assests/playstore.svg" /></noscript>
+            <%
+=begin%>
+ <img data-src="assests/playstore.svg" class="app_logo only_desktop lazyload el-hide" alt="Play Store Logo" src="assests/playstore.svg"> 
+<%
+=end%>
+            <noscript>
+              <%
+=begin%>
+ <img class="app_logo only_desktop" alt="Play Store Logo" src="assests/playstore.svg" /> 
+<%
+=end%>
+            </noscript>
             <p>Play Store</p>
           </div>
         </li>
         <li>
           <div>
-            <img data-src="assests/apple.svg" class="app_logo only_desktop lazyload el-hide" alt="Apple Store Logo" src="assests/apple.svg" />
+            <%
+=begin%>
+ <img data-src="assests/apple.svg" class="app_logo only_desktop lazyload el-hide" alt="Apple Store Logo" src="assests/apple.svg"> 
+<%
+=end%>
             <noscript>
-              <img class="app_logo only_desktop" alt="Apple Store Logo" src="assests/apple.svg" />
+              <%
+=begin%>
+ <img class="app_logo only_desktop" alt="Apple Store Logo" src="assests/apple.svg" /> 
+<%
+=end%>
             </noscript>
             <p>App Store</p>
           </div>
         </li>
       </ul>
+
     </div>
     <div class="footer_sec2">
       <p><span class="site-derictory">GreenPal</span></p>
@@ -51,7 +60,7 @@
         <li><span>Lawn Care Blog</span></li>
         <li><span>Lawn Care Article</span></li>
         <li><span>Snow Removal Services</span></li>
-        <li><span>Frequently Asked Questions</span></li>
+        <li><span>About Us</span></li>
         <li><span>Affordable Lawn Care</span></li>
         <li><span>Lawn Care Near Me</span></li>
         <li><span>Lawn Mowing Tips</span></li>
@@ -59,7 +68,7 @@
         <li><span>Yard Clean Up Tips</span></li>
         <li><span>Order Lawn Care</span></li>
         <li><span>GreenPal Reviews</span></li>
-        <li><span>About Us</span></li>
+        <li><span>Frequently Asked Questions</span></li>
         <li><span>Press & Media Hub</span></li>
       </ul>
     </div>
@@ -77,8 +86,7 @@
           <p class="site-derictory">Connect with us</p>
           <ul class="footer_social_links">
             <li class="facebook_logo">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+              <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                   <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                   <title>637F5F21-F049-4E94-A2D4-1455F3E681DD</title>
                   <desc>Created with sketchtool.</desc>
@@ -103,12 +111,10 @@
                       </g>
                     </g>
                   </g>
-                </svg>
-              </div>
+                </svg></div>
             </li>
             <li class="twitter_logo">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+              <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                   <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                   <title>637F5F21-F049-4E94-A2D4-1455F3E681DD</title>
                   <desc>Created with sketchtool.</desc>
@@ -133,11 +139,9 @@
                       </g>
                     </g>
                   </g>
-                </svg>
-              </div>
+                </svg></div>
             </li>
-            <li class="pinterest_logo_combined">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+            <li class="pinterest_logo_combined"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                 <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                 <title>637F5F21-F049-4E94-A2D4-1455F3E681DD</title>
                 <desc>Created with sketchtool.</desc>
@@ -162,11 +166,9 @@
                     </g>
                   </g>
                 </g>
-              </svg>
-            </li>
+              </svg></li>
             <li class="instagram_logo">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+              <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                   <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                   <title>637F5F21-F049-4E94-A2D4-1455F3E681DD</title>
                   <desc>Created with sketchtool.</desc>
@@ -191,8 +193,7 @@
                       </g>
                     </g>
                   </g>
-                </svg>
-              </div>
+                </svg></div>
             </li>
           </ul>
         </div>
@@ -200,12 +201,13 @@
 
       <div class="app_sec_mob only_mob">
         <p class="app-heading">Get the remote control for your lawn</p>
+
+
+
       </div>
 
-      <div class="total_satisfaction layzy" data-background="https://greenpal-production.s3.amazonaws.com/images/general/greenpal-guarantee.svg" style="
-                background-image: url('https://greenpal-production.s3.amazonaws.com/images/general/greenpal-guarantee.svg');
-              ">
-        <p>Total Satisfaction backed by<br />the GreenPal Guarantee!</p>
+      <div class="total_satisfaction layzy" data-background="https://greenpal-production.s3.amazonaws.com/images/general/greenpal-guarantee.svg" style="background-image: url(&quot;https://greenpal-production.s3.amazonaws.com/images/general/greenpal-guarantee.svg&quot;);">
+        <p>Total Satisfaction backed by<br>the GreenPal Guarantee!</p>
       </div>
     </div>
     <div class="clear"></div>
@@ -315,15 +317,20 @@
   <div class="footer_copyright">
     <div class="container_9">
       <ul class="left">
-        <li><span>Privacy Policy</span></li>
-        <li><span>Terms & Conditions</span></li>
+        <li><span style="text-decoration:underline">Privacy Policy</span></li>
+        <li><span style="text-decoration:underline">Terms & Conditions</span></li>
       </ul>
       <ul class="right">
         <li>Copyright © 2025 GreenPal Co. All rights reserved.</li>
       </ul>
     </div>
     <div class="how-it-works-cta-footer">
-      <button class="how-cta-button">See Prices</button>
+      <button class="btn btn-main-hero">
+        <span>See Prices</span>
+        <svg class="chevron-right" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18L15 12L9 6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
     </div>
   </div>
 </footer>

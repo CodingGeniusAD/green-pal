@@ -6,7 +6,7 @@ services:
     buildCommand: |
       bundle install
       bundle exec rails assets:precompile
-    startCommand: bundle exec rails server -e production -p $PORT
+    startCommand: bundle exec rails server -e production -p $PORT --binding 0.0.0.0
     envVars:
       - key: RAILS_ENV
         value: production
@@ -15,4 +15,6 @@ services:
       - key: RAILS_LOG_TO_STDOUT
         value: true
       - key: SECRET_KEY_BASE
-        generateValue: true 
+        value: "252253f9b090b4fbd465978b64903e8d09cb96bfde8afc809aab2702d03eade46f2977de31ff3549d1e1dc1737b3d26f45a1716d14dfc0311d1d6dc9e688c7fc"
+      - key: DATABASE_URL
+        value: "sqlite3:///dev/null" 
